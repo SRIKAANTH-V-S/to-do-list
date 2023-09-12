@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    box-sizing: content-box;
+}
+.completed{
+    text-decoration: line-through;
+    justify-content: space-between;
+}
+.sticky {
+    position: sticky;
+    top:0;
+    background-color: rgb(219, 180, 26);
+    margin-top:0;
+    height:40%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+.sticky h1{
+    text-align: center;
+    color:#fff;
+}
+
+
+body{
+    /*background-image: url("mountain2.jpg");*/
+    background-size: cover;
+    background-attachment: fixed;
+   /* background-image:linear-gradient(to  bottom,#2b6777 ,#c8d8e4) ;*/
+   background-color: #2b84ff;
+   
+}
+.content-area{
+    width:70%;
+    margin:1rem 15%;
+    height:90vh;
+    overflow: auto;
+    background-color: rgb(219, 180, 26);
+    border-radius: 7px;
+    box-shadow: 3px 3px 20px white;
+}
+.typeAndFilter{
+    display:flex;
+    margin-top:6%;
+}
+#task,#btn{
+    margin-right:1.5rem;
+ 
+}
+#task{
+    width:70%;
+    height:3rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+#filterDropdown{
+    height:2.4rem;
+}
+ul li{
+    background-color: azure;
+    margin:3%;
+    width:85%;
+    justify-content: space-between;  
+    margin-left: 7%;
+    text-align: center;
+    
+
+}
+ul li span{
+    text-align: center; 
+    margin-left:30%;
+    margin-right:30%;
+}
+
+#filterDropdown{
+    color:white;
+    background-color:#2b84ff;
+    border-radius: 2rem;
+    border:3px rgb(6, 6, 6) solid;
+    text-align: center;
+}
+#btn{
+    color:white;
+    background-color:#2b84ff;
+    border-radius: 50%;
+    padding: .7rem;
+    border:3px rgb(6, 6, 6) solid;
+    height:1.4rem;
+
+}
+#btn:hover,#filterDropdown:hover{
+    background-color: rgb(4, 63, 157)
+}
+#taskList {
+    list-style: none;
+    padding: 0;
+    max-width: 75%;
+    margin: 0 auto;
+} 
+
+li {
+    position:relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+li:hover {
+    box-shadow: 0px 10px 8px rgba(0, 0, 0, 0.339);
+}
+.deleteButton {
+    position:absolute;
+    box-sizing: border-box;
+    background-color: #f44336;
+    color: white;
+    padding:5px 5px ;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 2.5rem;
+    border-radius: 10px;
+    right:1;
+    left:88%;
+    bottom:.3rem;
+    top:2%;
+    
+}
+.deleteButton:hover{
+    background-color: #eb1809;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    border-radius: 5px;
+    height: 2rem;
+    width:2rem;
+    background-color: rgba(212, 188, 188, 0.911);
+    cursor: pointer;
+   margin-right: 10px;
+   position:absolute;
+   left:2;
+   right:92%;
+   top:1;
+   bottom:0.4rem;
+}
+input[type="checkbox"]:hover{
+    background: rgba(161, 154, 154, 0.911);
+}
+input[type="checkbox"]::after{
+    font-family:"Font Awesome 5 Free";
+    content: "\2714";
+    font-size:25px;
+    font-weight:bolder;
+    display:none;
+    color:white;
+    
+}
+input[type="checkbox"]:checked{
+    background-color: rgb(21, 230, 21);
+    
+}
+input[type="checkbox"]:checked::after{
+    display:block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:600px) {
+    body{
+        position:relative;
+    }
+   .content-area{
+    height: 85vh;
+    width:90vw;
+    margin:1rem;
+    margin-top:3rem;
+
+   }
+    #task{
+        width:70%;
+        height:2rem;
+        margin-left: 1rem;
+        font-size: 1rem;
+        font-weight: bolder;
+    }
+    #btn{
+        color:white;
+        background-color:#2b84ff;
+        border-radius: 50%;
+        padding: .7rem;
+        border:3px rgb(6, 6, 6) solid;
+        height:1rem;
+        font-size:0.7rem;
+
+    }
+    #filterDropdown{
+        height:1rem;
+        width:1rem;
+        padding:0.7rem;
+        text-align:center;
+    }
+    .sticky{
+    position: sticky;
+    top:0;
+    background-color: rgb(219, 180, 26);
+    margin-top:0;
+    height:30%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    }
+    input[type="checkbox"]{
+        position:absolute;
+        bottom:10%;
+    }
+    .deleteButton{
+        bottom: 10%;
+        top:15%;
+    }
+    
+}
+
